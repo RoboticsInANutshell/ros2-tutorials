@@ -6,4 +6,4 @@ Hello there, We are Prathamesh More and Fynn Boyer, and we are here to guide you
 We'll dive right into ROS2 tutorials without any unnecessary delays. Together, we'll unravel the secrets of this powerful framework, making robotics more accessible and comprehensible for you. So, let's not waste any more time and embark on this exciting ROS2 adventure!
 
 # ROS2 Python
-Refer -> [ROS2 Python Tutorials](/ros2-tutorials/Documentation/ros2-tutorials-python.md)
+Refer -> [ROS2 Python Tutorials](/Documentation/ros2-tutorials-python.md)
