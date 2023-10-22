@@ -9,7 +9,7 @@ Installing ROS2 can be a bit tricky because the ROS2 version evolves over time. 
 Humble ==> https://docs.ros.org/en/humble/Installation/Ubuntu-Install-Debians.html
 
 
-## Some .bashrc settings to make your life easier in ROS2
+## .bashrc settings your should know
 
 Think of your `.bashrc` file as a personal assistant for your Linux command-line adventure. It empowers you to tailor your shell environment by setting variables, creating shortcuts, and even tweaking the appearance of your terminal prompt. Let's explore how to access and configure it. 
 
