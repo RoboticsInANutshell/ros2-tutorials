@@ -9,7 +9,7 @@ Installing ROS2 can be a bit tricky because the ROS2 version evolves over time. 
 Humble ==> https://docs.ros.org/en/humble/Installation/Ubuntu-Install-Debians.html
 
 
-## setting up your .bashrc 
+## Setting up your .bashrc 
 
 Think of your `.bashrc` file as a personal assistant for your Linux command-line adventure. It empowers you to tailor your shell environment by setting variables, creating shortcuts, and even tweaking the appearance of your terminal prompt. Let's explore how to access and configure it. 
 
@@ -56,9 +56,43 @@ Use this to source your workspace by just typing `sc`. But you need to be in the
 alias sc="source ~/your/workspace/install/setup.bash"
 ```
 
+# Creating Workspace and Package
 
+## Creating a Workspace
 
+Start by creating a workspace folder. A good Practice is to give it a suffix as `ws` to identify it as a workspace. Now lets create a worksapce 
 
+```
+mkdir -p ros-basics_ws/src
+```
 
+Thats it. Your new workspace is ready. Hahaha, you expected more?
+
+## Creating a Custom Package
+
+Now first go to your `src` folder 
+
+```
+cd ~/ros-basics_ws/src/
+```
+
+then run the following command to create a custom package
+
+```
+ros2 pkg create --build-type ament_python my_package
+```
+
+What is `--build-type`?: It's a crucial option that determines how your package will be built. It allows you to choose between two build types:
+
+- `ament_python`: This option is used when you want to create a package that primarily contains Python code. It configures your package to use Python files for its implementation.
+- `ament_cmake`: On the other hand, if you choose ament_cmake, your package will be set up to use C++ files for its implementation. This option is ideal for developers who prefer to work with C++ for their ROS 2 packages.
+
+When you create your custom package with ament_python, you'll notice some key differences compared to ament_cmake:
+
+- Your package will have a setup.py file instead of a CMakeLists.txt file.
+- Your launch files will use a .py extension, like launch.py, rather than the .xml extension, such as launch.xml.
+
+Which one to use?
+This depends on your preferance. `ament_cmake` is based on ROS1 and if your are familier with editing the `cmakelist.txt` then use that. Otherwise use the `ament_python` as we will use it for this tutorial. 
 
 
