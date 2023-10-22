@@ -1,6 +1,6 @@
 
 
-# Installation and Configuration
+# Installation 
 
 ## Installing ROS2 in your Ubuntu System
 
