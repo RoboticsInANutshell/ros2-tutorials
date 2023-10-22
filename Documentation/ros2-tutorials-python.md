@@ -63,7 +63,7 @@ alias sc="source ~/your/workspace/install/setup.bash"
 Start by creating a workspace folder. A good Practice is to give it a suffix as `ws` to identify it as a workspace. Now lets create a worksapce 
 
 ```
-mkdir -p ros-basics_ws/src
+mkdir -p ros_tutorials_ws/src
 ```
 
 Thats it. Your new workspace is ready. Hahaha, you expected more?
@@ -73,7 +73,7 @@ Thats it. Your new workspace is ready. Hahaha, you expected more?
 Now first go to your `src` folder 
 
 ```
-cd ~/ros_tutorial_ws/src/
+cd ~/ros_tutorials_ws/src/
 ```
 
 then run the following command to create a custom package with a package name `ros_basics`
@@ -102,10 +102,43 @@ This depends on your preferance. `ament_cmake` is based on ROS1 and if your are 
 Again go to your `src` folder 
 
 ```
-cd ~/ros_tutorial_ws/src/
+cd ~/ros_tutorials_ws/src/
 ```
 Then run the following to clone an existing Git Repository for ros tutorials from the offical website. 
 
 ```
 git clone https://github.com/ros/ros_tutorials.git -b humble
 ```
+
+Now you should have 2 folders in `/src` folder `ros_basics` and `ros_tutorials`, and hence now you have 2 packages in your workspace
+
+## Building Workspace
+
+Now building these packages is an important step. Hence now go back to your workspace root folder
+
+```
+cd ~/ros_tutorials_ws/
+```
+and then run this
+
+```
+colcon build 
+```
+
+The above command should build both the packages for you and now inside your workspace your will notice more folders are added `logs``install``builds`. 
+
+If you want to build just one package in the workspace then use package select
+
+
+```
+colcon build --pacakges-select ros_basics
+```
+
+This will just build the `ros_basics` package and not the `ros_tutorials`package
+
+Also there is one more parameter, which will be useful in the future which is
+```
+colcon build --symlink-install
+```
+This command will make sure that you do not need to build the package everytime you make the changes to the python file. Although, when you make a new launch or executable files, then building the package irrespective manually is a good practise. 
+
