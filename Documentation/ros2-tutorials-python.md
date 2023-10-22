@@ -125,7 +125,7 @@ and then run this
 colcon build 
 ```
 
-The above command should build both the packages for you and now inside your workspace your will notice more folders are added `logs``install``builds`. 
+The above command should build both the packages for you and now inside your workspace your will notice more folders are added `logs` `install` `builds`. 
 
 If you want to build just one package in the workspace then use package select
 
