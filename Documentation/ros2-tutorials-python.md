@@ -9,7 +9,7 @@ Installing ROS2 can be a bit tricky because the ROS2 version evolves over time. 
 Humble ==> https://docs.ros.org/en/humble/Installation/Ubuntu-Install-Debians.html
 
 
-## Setting up your .bashrc 
+## Setting up your .bashrc (JUST READ)
 
 Think of your `.bashrc` file as a personal assistant for your Linux command-line adventure. It empowers you to tailor your shell environment by setting variables, creating shortcuts, and even tweaking the appearance of your terminal prompt. Let's explore how to access and configure it. 
 
@@ -56,7 +56,7 @@ Use this to source your workspace by just typing `sc`. But you need to be in the
 alias sc="source ~/your/workspace/install/setup.bash"
 ```
 
-# Creating Workspace and Package
+# Creating Workspace and Package 
 
 ## Creating a Workspace
 
