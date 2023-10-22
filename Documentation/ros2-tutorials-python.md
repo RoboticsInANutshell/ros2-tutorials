@@ -28,7 +28,7 @@ To streamline your ROS2 experience, add the following line to your .bashrc file:
 ```
 source /opt/ros/<ros-distro>/setup.bash
 ```
-This ensures that ROS2 libraries are sourced every time you open a terminal, allowing you to use ROS2 functionality seamlessly. 
+This ensures that ROS2 libraries are sourced every time you open a terminal, allowing you to use ROS2 functionality seamlessly. Obviously replace `<ros-distro>`with your distro.
 
 #### Automatically Source Your Workspace
 
