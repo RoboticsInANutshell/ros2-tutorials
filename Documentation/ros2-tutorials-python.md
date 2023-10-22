@@ -73,14 +73,15 @@ Thats it. Your new workspace is ready. Hahaha, you expected more?
 Now first go to your `src` folder 
 
 ```
-cd ~/ros-basics_ws/src/
+cd ~/ros_tutorial_ws/src/
 ```
 
-then run the following command to create a custom package
+then run the following command to create a custom package with a package name `ros_basics`
 
 ```
-ros2 pkg create --build-type ament_python my_package
+ros2 pkg create --build-type ament_python ros_basics
 ```
+This will create a package named `ros_basics`
 
 What is `--build-type`?: It's a crucial option that determines how your package will be built. It allows you to choose between two build types:
 
@@ -96,3 +97,15 @@ Which one to use?
 This depends on your preferance. `ament_cmake` is based on ROS1 and if your are familier with editing the `cmakelist.txt` then use that. Otherwise use the `ament_python` as we will use it for this tutorial. 
 
 
+## Downloading an Existing Package
+
+Again go to your `src` folder 
+
+```
+cd ~/ros_tutorial_ws/src/
+```
+Then run the following to clone an existing Git Repository for ros tutorials from the offical website. 
+
+```
+git clone https://github.com/ros/ros_tutorials.git -b humble
+```
