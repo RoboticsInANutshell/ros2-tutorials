@@ -58,6 +58,12 @@ alias sc="source ~/your/workspace/install/setup.bash"
 
 # Creating Workspace and Package 
 
+
+For a detailed understanding of the Workspace and Packages, please refer to the following video for descriptive explaination. 
+
+https://youtu.be/b6Gb8eCAoQg?si=a3NJvPL_FeNfMDxj
+
+
 ## Creating a Workspace
 
 Start by creating a workspace folder. A good Practice is to give it a suffix as `ws` to identify it as a workspace. Now lets create a worksapce 
@@ -141,4 +147,22 @@ Also there is one more parameter, which will be useful in the future which is
 colcon build --symlink-install
 ```
 This command will make sure that you do not need to build the package everytime you make the changes to the python file. Although, when you make a new launch or executable files, then building the package irrespective manually is a good practise. 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
