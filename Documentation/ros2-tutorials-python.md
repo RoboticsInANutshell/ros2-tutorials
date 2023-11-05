@@ -297,6 +297,40 @@ Now create a your python file with a name `test_subscriber.py` using the followi
 touch test_subscriber.py
 ```
 Now open the file in your favourite text editor (e.g. visual studio) and put the following content into it
+```
+#!/usr/bin/env python3
+
+import rclpy
+from rclpy.node import Node
+from geometry_msgs.msg import Point
+
+
+class MinimalSubscriber(Node):
+    def __init__(self):
+        super().__init__('Sub_Node')
+        self.sub = self.create_subscription(Point, 'communication',self.callback, 10)
+        self.sub
+
+
+    def callback(self,num):
+        print(num)
+
+def main (args=None):
+    rclpy.init(args=args)
+    minimal_subscriber = MinimalSubscriber()
+    rclpy.spin(minimal_subscriber)
+    minimal_subscriber.destroy_node()
+    rclpy.shutdown()
+
+    pass    
+    
+
+
+if __name__=='__main__':
+    main()
+```
+
+
 
 This code is a Python script for a ROS 2 subscriber node that subscribes to the 'communication' topic and prints the received messages of type `geometry_msgs.msg.Point`. Let's break down the code and explain each part in detail:
 
