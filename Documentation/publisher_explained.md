@@ -1,3 +1,52 @@
+```
+
+#!/usr/bin/env python3
+
+
+import rclpy
+import random
+from geometry_msgs.msg import Point
+from rclpy.node import Node
+
+
+
+class MinimalPublisher(Node):
+    def __init__(self):
+        super().__init__("Pub_Node")
+        self.pub = self.create_publisher(Point, 'communication',10)
+        self.timer_period = 0.1  # 1 second
+        self.timer = self.create_timer(self.timer_period, self.timer_callback)
+
+    def timer_callback(self):
+        coordinate = Point()
+        coordinate.x= random.uniform(1,100)
+        coordinate.y= random.uniform(1,100)
+        coordinate.z = random.uniform(1,100)  
+        self.pub.publish(coordinate)
+
+
+def main(args=None):
+    rclpy.init(args=args)
+
+    minimal_publisher = MinimalPublisher()
+
+    rclpy.spin(minimal_publisher)
+
+    # Destroy the node explicitly
+    # (optional - otherwise it will be done automatically
+    # when the garbage collector destroys the node object)
+    minimal_publisher.destroy_node()
+    rclpy.shutdown()
+
+
+if __name__ == '__main__':
+    main()
+
+
+```
+
+
+
 1. Shebang and Import Statements:
    ```python
    #!/usr/bin/env python3
